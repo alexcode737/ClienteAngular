@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <app-formareserva></app-formareserva>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <app-descripcion></app-descripcion>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+            <div class="col" *ngFor="let habitacion of habitaciones">
+                <div class="card h-100 shadow">
+                    <img src={{habitacion.fotografias[0]}} alt="" class="img-fluid w-100 h-100">
+                    <br>
+                    <h3 class="text-center fw-bold">{{habitacion.nombre}}</h3>
+                    <br>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Valor por noche: {{habitacion.valorNoche}}</li>
+                        <li class="list-group-item">Cantidad de personas permitidas: {{habitacion.numeroMaximoPersonas}}</li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-3 bg-ligth mt-6">
+    <app-footer></app-footer>
+</footer>
